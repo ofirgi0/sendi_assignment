@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RadioButton
+        android:id="@+id/btn_radio"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:background="@drawable/btn_filter_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:paddingStart="@dimen/padding_larger"
+        android:paddingLeft="@dimen/padding_larger"
+        android:paddingTop="@dimen/default_padding"
+        android:paddingEnd="@dimen/padding_larger"
+        android:paddingRight="@dimen/padding_larger"
+        android:paddingBottom="@dimen/default_padding"
+        android:textColor="@drawable/btn_text_filter_selector"
+        tools:text="Day" />
+
+</layout>

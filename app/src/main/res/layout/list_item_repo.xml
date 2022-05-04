@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="RepoListItemBinding" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_margin"
+        android:background="@android:color/white"
+        android:elevation="@dimen/card_view_elevation"
+        android:padding="@dimen/default_padding"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        app:cardElevation="@dimen/card_view_elevation">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/large_margin">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_profile_img"
+                android:layout_width="@dimen/item_owner_avatar_size"
+                android:layout_height="@dimen/item_owner_avatar_size"
+                android:src="@drawable/ic_placeholder"
+                android:transitionName="@string/transition_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:transitionName="@string/transition_title"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/default_margin"
+                android:paddingStart="@dimen/default_margin"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/font_regular"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/cv_profile_img"
+                app:layout_constraintTop_toTopOf="@id/cv_profile_img"
+                tools:text="Title of repo" />
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintLeft_toRightOf="@id/cv_profile_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text="10/10" />
+
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginRight="@dimen/large_margin"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="2"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_profile_img"
+                tools:text="This is the description"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/iv_img_language"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_star"
+                android:scaleType="centerInside"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:paddingStart="@dimen/small_margin"
+                android:paddingEnd="@dimen/small_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc"/>
+
+            <TextView
+                android:id="@+id/tv_star_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/default_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingEnd="@dimen/large_margin"
+                android:paddingRight="@dimen/large_margin"
+                android:textColor="@color/main_gray"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_img_language"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+                tools:text="568"/>
+
+
+            <ImageView
+                android:id="@+id/btn_favorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:elevation="@dimen/card_image_view_elevation"
+                android:shadowRadius="10"
+                android:shadowColor="@color/main_black"
+                app:elevation="@dimen/card_image_view_elevation"
+                app:fabSize="mini"
+                android:src="@drawable/ic_heart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+            <ImageView
+                android:id="@+id/btn_delete_fav"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:elevation="@dimen/card_image_view_elevation"
+                android:shadowRadius="10"
+                android:shadowColor="@color/main_black"
+                app:elevation="@dimen/card_image_view_elevation"
+                app:fabSize="mini"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+                android:visibility="gone"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

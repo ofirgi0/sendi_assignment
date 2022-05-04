@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_view_elevation">6.7dp</dimen>
+    <dimen name="card_image_view_elevation">4dp</dimen>
+    <dimen name="card_view_corner_radius">3.3dp</dimen>
+    <dimen name="default_margin">10dp</dimen>
+    <dimen name="large_margin">15dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="padding_larger">25dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="item_owner_avatar_size">45dp</dimen>
+    <dimen name="font_regular">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+</resources>
