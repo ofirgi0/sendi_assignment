@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         if (!Util.isNetworkAvailable(this)){
             binding.ivNoInternet.setVisibility(View.VISIBLE);
             binding.goToFavorites.setVisibility(View.GONE);
@@ -94,8 +100,5 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.content_fragment, MainRepoFragment.getInstance())
                     .commit();
         }
-
-
-
     }
 }

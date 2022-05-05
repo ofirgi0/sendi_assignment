@@ -53,14 +53,6 @@ public class RepositoryListAdapter extends RecyclerView.Adapter<RepositoryListAd
             int currentPosition = customItemViewHolder.getAdapterPosition();
             items.get(currentPosition).setFavorite(!items.get(currentPosition).isFavorite());
             listener.changeFavoriteStatus(items.get(currentPosition), items.get(currentPosition).isFavorite());
-            /*if (hideFavBtn){
-                itemBinding.btnFavorite.setVisibility(View.GONE);
-                itemBinding.btnDeleteFav.setVisibility(View.VISIBLE);
-            }
-            else{
-                int heartColorResource = items.get(currentPosition).isFavorite()? R.color.heart_red : R.color.main_black;
-                itemBinding.btnFavorite.setColorFilter(ContextCompat.getColor(context, heartColorResource), android.graphics.PorterDuff.Mode.SRC_IN);
-            }*/
         });
 
         return customItemViewHolder;
@@ -164,15 +156,10 @@ public class RepositoryListAdapter extends RecyclerView.Adapter<RepositoryListAd
                 int heartColorResource = isFavorited ? R.color.heart_red : R.color.main_black;
                 binding.btnFavorite.setColorFilter(ContextCompat.getColor(context, heartColorResource), android.graphics.PorterDuff.Mode.SRC_IN);
             }
-
-
         }
-
-
 
         private void onLayoutButtonClick() {
             listener.redirectToDetailScreen(binding.cvProfileImg, binding.tvTitle, getItem(getLayoutPosition()));
-            Toast.makeText(context, "onLayoutButtonClick", Toast.LENGTH_LONG).show();
 
         }
 
